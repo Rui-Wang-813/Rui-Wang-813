@@ -20,6 +20,24 @@
       font-family: 'Source Sans Pro', sans-serif;
     }
 
+    ul.dashed {
+        list-style-type: none;
+    }
+    ul.dashed > li {
+        text-indent: -5px;
+    }
+    ul.dashed > li:before {
+        content: "-";
+        text-indent: -5px;
+    }
+
+    hr.line {
+        border: 0;
+        background-color: #000;
+        height: 3px;
+        cursor: pointer;
+    }
+
   </style>
   <title>Rui Wang's Homepage</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -54,6 +72,7 @@
         of experience in web development, Object-oriented programming, unit testing, algorithm design, data
         processing, ML models implementation.
     </div>
+    <br>
 
     <h2>
         Education
@@ -114,6 +133,271 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <br>
+
+    <h2>
+        Skills
+    </h2>
+    <div>
+        <b>Programming</b>: Java, Python, C/C++, SQL, RSIC-V, Assembly, HTML, Javascript, Rails.
+        <b>Packages</b>: Numpy, PyTorch, TensorFlow, Pandas, Transformers.
+        <b>Framework</b>: Spring Boot, Hadoop, Hive, Spark, Django, Cucumber, React.
+        <b>Development tools</b>: Maven, Docker.
+        <b>Cloud computing</b>: AWS, Heroku.
+    </div>
+    <br>
+
+    <h2>
+        Experience
+    </h2>
+    <div>
+        <h3>
+            University of California, Berkeley, Machine Learning Safety Course Preparation
+        </h3>
+        <hr class="line">
+        <ul>
+            <li>
+                Assisting a PhD from Berkeley to prepare for a course ML Safety (slides and homework notebooks), the topic mainly includes:
+                <ul class="dashed">
+                    <li>
+                        <b>Hazard Analysis</b>: Risk Decomposition, A Systems View of Safety, Black Swans
+                    </li>
+                    <li>
+                        <b>Robustness</b>: Adversaries, Long Tails
+                    </li>
+                    <li>
+                        <b>Monitoring</b>: Anomalies, Interpretable Uncertainty, Transparency, Trojans, Emergent Behavior
+                    </li>
+                    <li>
+                        <b>Alignment</b>: Honesty, Value Learning, Machine Ethics, Intrasystem Goals
+                    </li>
+                    <li>
+                        <b>Systematic Safety</b>: ML for Improved Epistemics, ML for Improved Cyberdefense, Cooperative AI
+                    </li>
+                    <li>
+                        <b>Additional X-Risk Discussion</b>: Future Scenarios, Selection Pressures, Avoiding Capabilities Externalities
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                In the process of preparing for the course materials, I also learnt much in Hugging Face NLP (Natural Language Processing)
+                and interpretable NLP with heatmap.
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>
+            University of California, Berkeley, JavaScript Subset Compiler (C++)
+        </h3>
+        <hr class="line">
+
+        <ul>
+            <li>
+                built a compiler for JSS which I adopted from JavaScript and is a subset of it. Besides traditional control‑flow (if, switch) and
+                iteration (while, for) statements, JSS has many traits of a modern programming language, such as closure, dynamic type,
+                class, exception handling, lambda function and garbage collection.
+            </li>
+            <li>
+                this project mainly included four parts:
+                <ul class="dashed">
+                    <li>
+                        <b>Lexer</b>: tokenize JSS source code.
+                    </li>
+                    <li>
+                        <b>Syntatic Parser</b>: implementing context-free grammar, finite state machine, recursive descending parser, regular expression
+                    </li>
+                    <li>
+                        <b>Semantic Analyzer</b>: compile JSS tokens to JSS VM code.
+                    </li>
+                    <li>
+                        <b>Virtual Machine</b>: to run compiled JSS code.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>
+            University of California, Berkeley, Machine Learning Predictors (Python)
+        </h3>
+        <hr class="line">
+
+        <ul>
+            <li>
+                Built different machine learning models trained on online datasets (MNIST, cifar10, Titanic, etc.) and predict labels of test
+                datasets.
+            </li>
+            <li>
+                Many techniques involved, include:
+                <ul class="dashed">
+                    <li>
+                        PCA, K-means
+                    </li>
+                    <li>
+                        SVM
+                    </li>
+                    <li>
+                        Gaussian discriminant analysis, including quadratic discriminant analysis (QDA) and linear discriminant analysis (LDA)
+                    </li>
+                    <li>
+                        Different regression methods like linear regression, ridge regression, and so on.
+                    </li>
+                    <li>
+                        Decision trees, including ensemble learning, AdaBoost.
+                    </li>
+                    <li>
+                        Neural Networks, including ANN, CNN. Also learnt to use packages like PyTorch.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Also learnt techniques to preprocess data matrices. Including use one‑hot encoding for categorical features.
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>
+            University of California, Berkeley, Font Rendering Engine (C++)
+        </h3>
+        <hr class="line">
+
+        <ul>
+            <li>
+                Built a renderer that renders a sequence (composed of letters, numbers, punctuations) with particular font given the .ttf file
+                corresponding to this font.
+            </li>
+            <li>
+                Used c++ library FreeType to load the .ttf file into an object in library that contains the face and contours data of this font.
+                Then converted this information into SVG files (path elements).
+            </li>
+            <li>
+                Established a rasterization pipeline that can render this SVG file into images of char sequences.
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>
+            University of California, Berkeley, Encrypted File Sharing System (Golang)
+        </h3>
+        <hr class="line">
+
+        <ul>
+            <li>
+                Self-designed and implemented an end-to-end encrypted file sharing system using crypographic techniques such as HMAC,
+                RSA, AES block encryption and so on to ensure confidentiality and integrity of users' files.
+            </li>
+            <li>
+                Users of this system can:
+                <ul class="dashed">
+                    <li>
+                        Log in with username and password;
+                    </li>
+                    <li>
+                        Save files to and load files from server;
+                    </li>
+                    <li>
+                        Overwrite and append to accessible (owned and shared) files on the server;
+                    </li>
+                    <li>
+                        Share files with other users;
+                    </li>
+                    <li>
+                        Revoke access to previously shared files.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>
+            University of California, Berkeley, Actionmap (Ruby on Rails)
+        </h3>
+        <hr class="line">
+
+        <ul>
+            <li>
+                Worked with a 4-people agile development team. In the process of collaboration and development, we utilized Codecov,
+                Bluejay, GitHub.
+            </li>
+            <li>
+                Used Ruby on Rails to develop web application by which users could:
+                <ul class="dashed">
+                    <li>
+                        Log in using their Google or GitHub accounts.
+                    </li>
+                    <li>
+                        Learn about their representatives in their areas.
+                    </li>
+                    <li>
+                        Aggregate, View, Share news items in their areas.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>
+            University of California, Berkeley, Pacman AI (Python)
+        </h3>
+        <hr class="line">
+
+        <ul>
+            <li>
+                Designed and Implemented agents that use data from sensors to locate positions of themselves, locate and eat the ghosts in
+                different environments. Techniques include:
+
+                <ul class="dashed">
+                    <li>
+                        search algorithms like A*, BFS, DFS
+                    </li>
+                    <li>
+                        reinforcement learning, Q-learning
+                    </li>
+                    <li>
+                        Markov Decision Process
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>
+            University of California, Berkeley, Gitlet (Java)
+        </h3>
+        <hr class="line">
+
+        <ul>
+            <li>
+                Gitlet is a version-control system that mimics some of the basic features of the popular system Git. It is essentially a backup
+                system for related collections of files. It supports the following features:
+                <ul class="dashed">
+                    <li>
+                        Saving the contents of entire directories of files.
+                    </li>
+                    <li>
+                        Restoring a version of one or more files or entire commits.
+                    </li>
+                    <li>
+                        Viewing the history of user's backups.
+                    </li>
+                    <li>
+                        Maintaining related sequences of commits.
+                    </li>
+                    <li>
+                        Merging changes made in one branch into another.
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
 </body>
